@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Hamza Aliyu Idris, a Software Engineer specializing in mobile and web development.">
+    <meta name="keywords" content="Hamza Aliyu Idris, Software Engineer, Mobile Developer, Web Developer, Portfolio">
+    <meta property="og:title" content="Hamza Aliyu Idris | Software Engineer">
+    <meta property="og:description" content="Passionate software engineer with expertise in Java, Flutter, PHP, and more.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Hamza+Aliyu+Idris+Portfolio">
+    <title>Hamza Aliyu Idris | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        /* NAV */
+        nav {
+            background: #2c3e50;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #ecf0f1;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #3498db; }
+        /* HERO */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        header p { font-size: 1.3rem; margin-bottom: 30px; }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #3498db;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #2980b9; }
+        /* SECTIONS */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        /* SKILLS */
+        .skills ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skills li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .skills li:hover { transform: translateY(-5px); }
+        .skills li i { font-size: 2rem; color: #3498db; margin-bottom: 10px; }
+        /* CARDS */
+        .card {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        /* TESTIMONIALS */
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .testimonial {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+        /* CONTACT */
+        .contact a {
+            font-weight: 600;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact button {
+            background: #3498db;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* FOOTER */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 30px;
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .skills ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <header>
+        <h1>Hamza Aliyu Idris</h1>
+        <p>Software Engineer | Mobile & Web System Developer</p>
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="HAMZA_ALIYU_IDRIS_CV.pdf" class="btn" download>Download CV</a>
+        <a href="Resume.pdf" class="btn" download>Download Resume</a>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a First Class graduate of Information Technology from the International University of East Africa (IUEA).
+            I am a passionate software engineer with strong experience in web, mobile, and system development.
+            I enjoy building scalable solutions and solving real-world problems through technology.
+        </p>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><i class="fab fa-java"></i><br>Java</li>
+            <li><i class="fab fa-php"></i><br>PHP (Laravel)</li>
+            <li><i class="fab fa-flutter"></i><br>Flutter</li>
+            <li><i class="fab fa-android"></i><br>Android (Java & XML)</li>
+            <li><i class="fab fa-html5"></i><br>HTML & CSS</li>
+            <li><i class="fas fa-database"></i><br>MySQL</li>
+            <li><i class="fas fa-code"></i><br>ODK Programming</li>
+            <li><i class="fas fa-cogs"></i><br>System Analysis & Design</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card">
+            <img src="https://source.unsplash.com/800x400/?crime,report" alt="Online Crime Reporting System">
+            <h3>Online Crime Reporting System</h3>
+            <p>Allows citizens to report crimes online and track case progress digitally.</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/800x400/?stress,management" alt="Stress Management Mobile Application">
+            <h3>Stress Management Mobile Application</h3>
+            <p>A mobile app designed to help university students manage academic and financial stress.</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/800x400/?project,monitoring" alt="Digital Project Monitoring System">
+            <h3>Digital Project Monitoring System</h3>
+            <p>Tracks and monitors government and organizational development projects.</p>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="card">
+            <h3>Workshop Assistant – Malaria Consortium</h3>
+            <p>2025 – Present</p>
+        </div>
+        <div class="card">
+            <h3>LQAS Data Collector – Malaria Consortium</h3>
+            <p>2024</p>
+        </div>
+        <div class="card">
+            <h3>Research & Community Health Roles</h3>
+            <p>Save the Children, Akena Associates, Imal Consults</p>
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Hamza delivered exceptional work on our project. Highly recommended!"</p>
+                <cite>- Client Name</cite>
+            </div>
+            <div class="testimonial">
+                <p>"A talented developer with great problem-solving skills."</p>
+                <cite>- Another Client</cite>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:reach2hamzaaliyuzkr@gmail.com">reach2hamzaaliyuzkr@gmail.com</a></p>
+        <p>Phone: (+234)9038704008   (+234)9011467418</p>
+        <p>GitHub: <a href="https://github.com/zakiraitech" target="_blank"><i class="fab fa-github"></i> github.com/hamzaaliyu</a></p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>© 2026 Hamza Aliyu Idris. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Simple scroll animation
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        });
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
